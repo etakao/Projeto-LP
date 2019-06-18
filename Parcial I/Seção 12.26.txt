@@ -1,0 +1,175 @@
+10  print "projeto de lp secao 12.26"
+15  rem
+20  print "1) calcular a media de 3 numeros inteiros"
+30  print "2) calcular a soma de 10 numeros inteiros"
+40  print "3) calcular a media de 7 numeros inteiros, positivos e negativos"
+50  print "4) determinar o maior numero inteiro dentre os n numeros determinados"
+60  print "5) determinar o menor numero inteiro dentre 10 numeros determinados"
+70  print "6) calcular a soma dos numeros inteiros pares de 2 a 30"
+80  print "7) calcular o produto dos numeros inteiros impares de 1 a 9"
+90  print "escolha uma opcao, de 1 a 7"
+95  rem
+100  input z
+110  if z == 1 goto 180
+120  if z == 2 goto 270
+130  if z == 3 goto 360
+140  if z == 4 goto 470
+150  if z == 5 goto 630
+160  if z == 6 goto 790
+170  if z == 7 goto 890
+172  if z < 0 goto 90
+175  if z > 7 goto 90
+178  rem
+180  print "introduza 3 numeros inteiros"
+190  input a
+200  input b
+210  input c
+215  rem calcula a media dos 3 numeros introduzidos e atribui o resultado em r
+220  let r = (a + b + c) / 3
+225  rem
+230  print "a media dos 3 numeros introduzidos eh"
+240  print r
+245  rem
+250  let r = 0
+255  rem
+260  goto 1000
+262  rem
+265  rem
+270  print "introduza um numero inteiro ou -9999 para sair do loop"
+280  input a
+285  rem verifica o valor da sentinela
+290  if  a == -9999 goto 320
+292  rem
+295  rem calcula a soma dos numeros introduzidos e atribui o resultado em r
+300  let r = r + a
+305  rem
+310  goto  270
+315  rem
+320  print "a soma dos 10 numeros introduzidos eh"
+330  print r
+335  rem
+340  let r = 0
+345  rem
+350  goto 1000
+352  rem
+355  rem
+360  let i = 1
+365  rem verifica o valor do contador
+370  if i > 7 goto 420
+375  print "introduza um numero inteiro, podendo ser positivo ou negativo"
+380  input a
+385  rem realiza a soma entre os numeros introduzidos e atribui o resultado em r
+390  let r = r + a
+395  rem atribui +1 ao contador
+400  let i = i + 1
+405  rem
+410  goto 370
+415  rem calcula a media dos 7 numeros introduzidos
+420  let r = r / 7
+425  rem 
+430  print "a media dos 7 numeros introduzidos eh"
+440  print r
+445  rem
+450  let r = 0
+455  rem
+460  goto 1000
+462  rem
+465  rem
+470  print "determine a quantidade de numeros a serem analizados"
+480  input q
+485  rem  i eh o contador
+490  let i = 1
+495  rem  m recebe o numero maior 
+500  let m = 0
+505  rem verifica o valor do contador
+510  if i > q goto 590
+520  print "introduza um numero inteiro"
+530  input a
+535  rem
+540  let i = i + 1
+545  rem verifica se o numero introduzido eh maior que m
+550  if a > m goto 570
+555  rem 
+560  goto 505
+565  rem
+570  let m = a
+580  goto 505
+585  rem
+590  print "o maior numero dentre os introduzidos eh"
+600  print m
+605  rem
+610  let m = 0
+615  rem 
+620  goto 1000
+622  rem
+625  rem
+630  print "introduza um numero inteiro"
+640  input a
+645  rem  i eh o contador
+650  let i = 2
+655  rem  m recebe o numero menor 
+660  let m = a
+665  rem verifica o valor do contador
+670  if i > 10 goto 750
+680  print "introduza um numero inteiro"
+690  input a
+695  rem
+700  let i = i + 1
+705  rem verifica se o numero introduzido eh menor que m
+710  if a < m goto 730
+715  rem 
+720  goto 665
+725  rem
+730  let m = a
+740  goto 665
+745  rem
+750  print "o menor numero dentre os introduzidos eh"
+760  print m
+765  rem
+770  let m = 0
+775  rem
+780  goto 1000
+782  rem
+785  rem
+790  rem i = i + 2, carregando os numeros pares de 2 a 30
+800  let i = 2
+805  rem  verifica o valor de i, se for maior que 30, o valor de r eh impresso 
+810  if i > 30 goto 850
+815  rem r armazena a soma de todos os pares de 2 a 30
+820  let r = r + i
+825  rem
+830  let i = i + 2
+840  goto 805
+845  rem
+850  print "o resultado da soma de todos os pares de 2 a 30 eh"
+860  print r
+865  rem
+870  let r = 0
+875  rem
+880  goto 1000
+882  rem
+885  rem
+890  rem i = i + 2, carregando os numeros impares de 1 a 9
+900  let i = 1
+910  let r = 1
+915  rem  verifica o valor de i, se for maior que 9, o valor de r eh impresso 
+920  if i > 9 goto 960
+925  rem r armazena o produto de todos os impares de 1 a 9
+930  let r = r * i
+935  rem
+940  let i = i + 2
+950  goto 915
+955  rem
+960  print "o resultado do produto de todos os impares de 1 a 9 eh"
+970  print r
+975  rem
+980  let r = 0
+985  rem
+990  goto 1000
+992  rem
+995  rem
+1000  print "gostaria de realizar mais uma operacao? se sim digite 1, se nao 0"
+1010  input t
+1020  if t == 1 goto 10
+1030  print "a program made by erick and lucas"
+1040  end
