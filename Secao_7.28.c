@@ -208,7 +208,7 @@ void escrever(int acc, int contador, int mem[])
 
    printf("\nRegistradores:\n");
    printf("acumulador\t\t%c%.4d\n"
-	  "instructionCounter\t%.2d\n"
+	  "Contador de instrução\t%.2d\n"
 	  "Registrador de Instrução\t%c%.4d\n"
 	  "Código de Operações\t\t%.2d\n"
 	  "operando\t\t\t%.2d\n",
