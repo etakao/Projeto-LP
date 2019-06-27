@@ -93,14 +93,14 @@ int main(void)
 	 case ADD:
 	    acumulador += memoria[operando];
 
-	    if(acumulador > +9999 || acumulador -9999)
+	    if(acumulador > +9999 || acumulador < -9999)
 	       err = 1;
 
 	    break;
 	 case SUBTRACT:
 	    acumulador -= memoria[operando];
 
-	    if(acumulador > +9999 || acumulador -9999)
+	    if(acumulador > +9999 || acumulador < -9999)
 	       err = 1;
 
 	    break;
@@ -114,7 +114,7 @@ int main(void)
 	 case MULTIPLY:
 	    acumulador *= memoria[operando];
 
-	    if(acumulador > +9999 || acumulador -9999)
+	    if(acumulador > +9999 || acumulador < -9999)
 	       err = 1;
 
 	    break;
